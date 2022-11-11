@@ -30,7 +30,7 @@ const newsListComponent = new NewsList({
 });
 newsListComponent.checkData(request, keywordStorage, cardNumberStorage, searchForm);
 
-searchForm.addEventListener('submit', () => {
+searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   newsListComponent.renderNews(searchForm.input.value);
 });

@@ -23,12 +23,13 @@ class Api {
     const timeFrom = `${sevenDaysAgoDate.getFullYear()}-${sevenDaysAgoDate.getMonth() + 1}-${sevenDaysAgoDate.getDate()}`;
     const timeTo = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-${todayDate.getDate()}`;
 
+    console.log(timeTo, timeFrom);
+
     searchForm.input.disabled = true;
     searchButton.disabled = true;
     notFoundBlock.setAttribute('style', 'display: none');
     mainContainer.setAttribute('style', 'display: none');
     preloaderBlock.setAttribute('style', 'display: block');
-
     return fetch(`https://newsapi.org/v2/everything?q=${keyword}&from=${timeFrom}&to=${timeTo}&pageSize=100&language=ru&sortBy=popularity&${this.token}`, {
       headers: {
         authorization: this.token
