@@ -15,16 +15,13 @@ class Api {
     });
   }
   getNews(keyword, notFoundBlock, preloaderBlock, mainContainer, searchButton, searchForm) {
-    // time calculate
     const todayDate = new Date();
     const sevenDaysAgoDate = new Date();
     const daysAgo = 6;
     sevenDaysAgoDate.setDate(todayDate.getDate() - daysAgo);
     const timeFrom = `${sevenDaysAgoDate.getFullYear()}-${sevenDaysAgoDate.getMonth() + 1}-${sevenDaysAgoDate.getDate()}`;
     const timeTo = `${todayDate.getFullYear()}-${todayDate.getMonth() + 1}-${todayDate.getDate()}`;
-
-    console.log(timeTo, timeFrom);
-
+    
     searchForm.input.disabled = true;
     searchButton.disabled = true;
     notFoundBlock.setAttribute('style', 'display: none');
