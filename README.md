@@ -1,5 +1,4 @@
-# NewsAnalyzer - https://ivansolontsov.github.io/diplom/
-current version - 0.0.3
+current version - 1.0
 ---
 Для того, чтобы развернуть проект нужно:
 - Webpack
